@@ -46,7 +46,7 @@ function Createuser() {
 
     },
 
-    onSubmit: async values => {
+    onSubmit: async (values) => {
      let user = await axios.post("https://6301ec84c6dda4f287af4f45.mockapi.io/users",values)
 
     }
