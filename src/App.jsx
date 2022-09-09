@@ -13,6 +13,10 @@ import {
 import Createuser from './createuser';
 import Userview from './Userview';
 import Editusers from './Editusers';
+import Productsview from './Productsview';
+import Editproducts from './Editproducts';
+import Createproduct from './Createproduct';
+
 
 
 
@@ -22,18 +26,20 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/portal" element={<Portal />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="Users" element={<Users />}/>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/portal" element={<Portal />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="Users" element={<Users />} />
             <Route path="Users/:id" element={<Userview />} />
             <Route path="Users/edit/:id" element={<Editusers />} />
             <Route path="Products" element={<Products />} />
+            <Route path="Products/:id" element={<Productsview />} />
+            <Route path="Products/edit/:id" element={<Editproducts />} />
             <Route path="createuser" element={<Createuser />} />
-            
-        </Route>
-      </Routes>
+            <Route path="createproduct" element={<Createproduct />} />
+          </Route>
+        </Routes>
     </BrowserRouter>
   );
 }

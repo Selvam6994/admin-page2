@@ -7,8 +7,7 @@ import { Outlet } from "react-router-dom";
 function Portal() {
   return (
     <div className="App">
-        <div id="page-top">
-               
+        <div id="page-top">     
         <div id="wrapper">
             <Sidebar></Sidebar>
             <div id="content-wrapper" className="d-flex flex-column">
